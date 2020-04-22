@@ -1,8 +1,19 @@
 import React from 'react';
 import '../stylesheets/App.scss';
+import Header from './Header.js';
+import Filters from './Filters.js';
+import CharacterList from './CharacterList.js';
 
-function App() {
-  return <div className='App'></div>;
-}
+const App = () => {
+  return (
+    <>
+      <Header />
+      <main>
+        <Filters />
+        <CharacterList />
+      </main>
+    </>
+  );
+};
 
 export default App;
