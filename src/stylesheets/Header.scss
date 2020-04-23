@@ -1,0 +1,10 @@
+.header {
+  &__background {
+    background: url('../images/rick-and-morty.png') center center no-repeat;
+    background-size: contain;
+    height: 20vh;
+  }
+  &__form {
+    padding-top: 20px;
+  }
+}
