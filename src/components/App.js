@@ -6,16 +6,31 @@ import getDatafromApi from '../services/api.js';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
+  const [nameFilter, setNameFilter] = useState('');
 
+  // Call Api
   useEffect(() => {
     getDatafromApi().then((data) => setCharacters(data));
   }, []);
 
+  // event handlers
+  const handleFilter = (data) => {
+    if (data.key === 'name') {
+      setNameFilter(data.value);
+    }
+  };
+
+  //render data
+
+  const filterCharacter = characters.filter((character) => {
+    return character.name.toUpperCase().includes(nameFilter.toUpperCase());
+  });
+
   return (
     <>
-      <Header />
+      <Header handleFilter={handleFilter} />
       <main>
-        <CharacterList characters={characters} />
+        <CharacterList characters={filterCharacter} />
       </main>
     </>
   );
