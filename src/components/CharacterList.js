@@ -1,13 +1,13 @@
 import React from 'react';
 import CharacterCard from './CharacterCard.js';
 
-const CharacterList = () => {
-  return (
-    <>
-      <h2>Personajes</h2>
-      <CharacterCard />
-    </>
-  );
+const CharacterList = (props) => {
+  const characterElements = props.characters.map((character) => (
+    <li key={character.id}>
+      <CharacterCard character={character} />
+    </li>
+  ));
+  return <ul>{characterElements}</ul>;
 };
 
 export default CharacterList;

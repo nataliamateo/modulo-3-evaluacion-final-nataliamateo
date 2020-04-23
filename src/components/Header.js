@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Header = () => {
-  return <div className='Header'>Rick and Morty</div>;
+  return <header className='header'></header>;
 };
 
 export default Header;
