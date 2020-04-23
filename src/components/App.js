@@ -40,7 +40,7 @@ const App = () => {
   };
 
   return (
-    <>
+    <div className='app'>
       <Header handleFilter={handleFilter} />
       <main>
         <Switch>
@@ -51,7 +51,7 @@ const App = () => {
           <Route path='/character/:characterId' render={renderCharacterDetail} />
         </Switch>
       </main>
-    </>
+    </div>
   );
 };
 

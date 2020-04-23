@@ -1,12 +1,17 @@
 import React from 'react';
 import CharacterCard from './CharacterCard.js';
 import '../stylesheets/CharacterList.scss';
+import Morty from '../images/morty-sad.png';
 
 const CharacterList = (props) => {
   if (props.characters.length === 0) {
     return (
-      <div>
-        <h2>Personaje no encontrado</h2>
+      <div className='container-notfound'>
+        <img className='container-notfound__img' src={Morty} alt='Morty triste' />
+        <div className='container-notfound__text'>
+          <h2>Personaje no encontrado</h2>
+          <p>Introduzca otra búsqueda</p>
+        </div>
       </div>
     );
   } else {

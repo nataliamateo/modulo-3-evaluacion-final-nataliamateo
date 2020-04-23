@@ -1,7 +1,39 @@
 .cards {
   list-style: none;
   padding: 0;
-  margin: 20px 0;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
+  margin-bottom: 0;
+  @media all and (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 2rem;
+  }
+  @media all and (min-width: 1280px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 4rem;
+    padding-bottom: 2rem;
+  }
+  @media all and (min-width: 2048px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 5rem;
+  }
+}
+
+.container-notfound {
+  height: 20rem;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  &__img {
+    width: 20rem;
+    height: 15rem;
+    border-radius: 5px;
+  }
+  &__text {
+    margin-left: 20px;
+    height: 15rem;
+    color: white;
+  }
 }

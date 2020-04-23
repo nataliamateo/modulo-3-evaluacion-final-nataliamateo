@@ -1,7 +1,32 @@
-.card-detail {
-  background-color: cyan;
+.detail {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  &__card {
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: rgb(141, 182, 243);
+    &--btn {
+      margin-top: 1rem;
+      margin-left: 24rem;
+      padding: 0.5rem 0.8rem;
+      background-color: #fcfcfc;
+      border: none;
+      border-radius: 0.25rem;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: 700;
+      width: 5rem;
+    }
+  }
+  &__data {
+    display: flex;
+    flex-direction: row;
+    width: 30rem;
+  }
 }
 
 .container {
