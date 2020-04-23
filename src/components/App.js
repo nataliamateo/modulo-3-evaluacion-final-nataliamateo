@@ -5,6 +5,7 @@ import Header from './Header.js';
 import CharacterList from './CharacterList.js';
 import getDatafromApi from '../services/api.js';
 import CharacterDetailPj from './CharacterDetailPj.js';
+import Filters from './Filters';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -44,6 +45,7 @@ const App = () => {
       <main>
         <Switch>
           <Route exact path='/'>
+            <Filters className='header__form' handleFilter={handleFilter} />
             <CharacterList characters={filterCharacter} />
           </Route>
           <Route path='/character/:characterId' render={renderCharacterDetail} />
