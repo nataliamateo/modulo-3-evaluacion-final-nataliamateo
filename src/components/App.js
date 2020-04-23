@@ -3,6 +3,7 @@ import '../stylesheets/App.scss';
 import Header from './Header.js';
 import CharacterList from './CharacterList.js';
 import getDatafromApi from '../services/api.js';
+import CharacterDetailPj from './CharacterDetailPj';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -31,6 +32,7 @@ const App = () => {
       <Header handleFilter={handleFilter} />
       <main>
         <CharacterList characters={filterCharacter} />
+        <CharacterDetailPj />
       </main>
     </>
   );

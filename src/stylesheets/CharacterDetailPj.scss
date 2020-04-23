@@ -1,0 +1,27 @@
+.card-detail {
+  background-color: cyan;
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  align-self: center;
+  &__image {
+    padding: 1.5rem;
+    height: 15rem;
+  }
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 20px;
+    :first-child {
+      padding-top: 10px;
+    }
+    &--item {
+      font-weight: normal;
+      font-size: 14px;
+    }
+  }
+}
