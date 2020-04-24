@@ -1,5 +1,6 @@
 import React from 'react';
 import '../stylesheets/FilterByName.scss';
+import PropTypes from 'prop-types';
 
 const FilterByName = (props) => {
   const handleChange = (ev) => {
@@ -15,6 +16,10 @@ const FilterByName = (props) => {
       <input className='form__input-text' id='name' placeholder='Busca tu personaje' name='name' onChange={handleChange} onKeyDown={handleChange}></input>
     </>
   );
+};
+
+FilterByName.propTypes = {
+  input: PropTypes.string,
 };
 
 export default FilterByName;
