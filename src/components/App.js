@@ -31,12 +31,12 @@ const App = () => {
 
   // render card detail
   const renderCharacterDetail = (props) => {
-    console.log(props);
-    const characterId = props.match.params.characterId;
-    const foundCharacter = characters.find((character) => {
-      return character.id === characterId;
-    });
-    return <CharacterDetailPj character={foundCharacter} />;
+    const characterId = parseInt(props.match.params.id);
+    const foundCharacter = characters.find((character) => character.id === characterId);
+    // console.log(foundCharacter);
+    if (foundCharacter !== undefined) {
+      return <CharacterDetailPj character={foundCharacter} />;
+    }
   };
 
   return (
@@ -48,7 +48,7 @@ const App = () => {
             <Filters className='header__form' handleFilter={handleFilter} />
             <CharacterList characters={filterCharacter} />
           </Route>
-          <Route path='/character/:characterId' render={renderCharacterDetail} />
+          <Route path='/:id' render={renderCharacterDetail} />
         </Switch>
       </main>
     </div>
