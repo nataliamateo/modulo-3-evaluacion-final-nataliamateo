@@ -22,7 +22,9 @@ const CharacterDetailPj = (props) => {
     <div className='detail'>
       <div className='detail__card'>
         <Link to='/'>
-          <button className='detail__card--btn'>Volver</button>
+          <button className='detail__card--btn' title='Ir a la home'>
+            Volver
+          </button>
         </Link>
         <div className='detail__data'>
           <div>
