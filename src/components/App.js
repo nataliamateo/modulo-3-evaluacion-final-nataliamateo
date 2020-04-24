@@ -10,6 +10,7 @@ import Filters from './Filters';
 const App = () => {
   const [characters, setCharacters] = useState([]);
   const [nameFilter, setNameFilter] = useState('');
+  const [speciesFilter, setSpeciesFilter] = useState('all');
 
   // Call Api
   useEffect(() => {
@@ -20,14 +21,24 @@ const App = () => {
   const handleFilter = (data) => {
     if (data.key === 'name') {
       setNameFilter(data.value);
+    } else if (data.key === 'species') {
+      setSpeciesFilter(data.value);
     }
   };
 
   //render data
 
-  const filterCharacter = characters.filter((character) => {
-    return character.name.toUpperCase().includes(nameFilter.toUpperCase());
-  });
+  const filterCharacter = characters
+    .filter((character) => {
+      return character.name.toUpperCase().includes(nameFilter.toUpperCase());
+    })
+    .filter((character) => {
+      if (speciesFilter === 'all') {
+        return true;
+      } else {
+        return character.species === speciesFilter;
+      }
+    });
 
   // render card detail
   const renderCharacterDetail = (props) => {

@@ -20,6 +20,8 @@
   }
   @media all and (min-width: 1280px) {
     margin-bottom: 50px;
+    width: 22rem;
+    height: 29rem;
     transform: scale(1);
     &:hover {
       transform: scale(1.1);
@@ -31,8 +33,6 @@
   }
   &__image {
     width: 100%;
-    align-self: center;
-    border-radius: 1px;
   }
   &__name {
     font-family: 'Montserrat', sans-serif;
@@ -40,6 +40,7 @@
     text-align: justify;
     margin-top: 1.5rem;
     margin-bottom: 0;
+    font-weight: bold;
     @media all and (min-width: 768px) {
       font-size: 20px;
       font-weight: bold;
@@ -51,7 +52,6 @@
   }
   &__species {
     font-family: 'Montserrat', sans-serif;
-    text-align: justify;
     margin-top: 0.5rem;
     margin-bottom: 0;
     padding-left: 1rem;

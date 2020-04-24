@@ -3,15 +3,24 @@
   margin-bottom: 3rem;
   display: flex;
   justify-content: center;
+
   &__card {
-    width: 30rem;
+    height: 35rem;
+    width: 20rem;
     display: flex;
     flex-direction: column;
     margin: 0;
-    background-color: rgb(141, 182, 243);
+    background-image: url(../images/space-1.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    @media all and (min-width: 768px) {
+      width: 43rem;
+      height: 25rem;
+    }
+
     &--btn {
       margin-top: 1rem;
-      margin-left: 24rem;
+      margin-left: 1.5rem;
       padding: 0.5rem 0.8rem;
       background-color: #fcfcfc;
       border: none;
@@ -20,17 +29,29 @@
       font-size: 0.8rem;
       font-weight: 700;
       width: 5rem;
+      @media all and (min-width: 768px) {
+        align-self: center;
+        margin-left: 36rem;
+        margin-top: 2rem;
+      }
     }
   }
   &__data {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 30rem;
+    @media all and (min-width: 768px) {
+      flex-direction: row;
+      width: 42rem;
+    }
   }
 }
 
 .container {
-  align-self: center;
+  padding-left: 20px;
+  @media all and (min-width: 768px) {
+    align-self: center;
+  }
   &__image {
     padding: 1.5rem;
     height: 15rem;
@@ -39,14 +60,61 @@
     list-style: none;
     margin: 0;
     padding: 0;
-    font-weight: bold;
-    font-size: 20px;
     :first-child {
       padding-top: 10px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    @media all and (min-width: 768px) {
+      :first-child {
+        font-size: 24px;
+      }
     }
     &--item {
+      margin-top: 10px;
       font-weight: normal;
-      font-size: 14px;
+      font-size: 18px;
+      color: white;
+      @media all and (min-width: 768px) {
+        font-size: 20px;
+      }
     }
   }
+}
+
+// Icons
+.fas {
+  margin-left: 10px;
+}
+
+.far {
+  margin-left: 10px;
+}
+
+// HEART
+@keyframes heart {
+  from {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  to {
+    transform: none;
+  }
+}
+
+.fa-heartbeat {
+  color: red;
+  animation: heart 1s infinite;
+}
+
+// DIZZY
+.fa-dizzy {
+  color: yellow;
+}
+
+// ALIEN
+.alien {
+  margin-left: 10px;
 }
