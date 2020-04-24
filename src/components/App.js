@@ -6,6 +6,7 @@ import CharacterList from './CharacterList.js';
 import getDatafromApi from '../services/api.js';
 import CharacterDetailPj from './CharacterDetailPj.js';
 import Filters from './Filters';
+import CharacterNotFound from './CharacterNotFound.js';
 
 const App = () => {
   const [characters, setCharacters] = useState([]);
@@ -44,9 +45,10 @@ const App = () => {
   const renderCharacterDetail = (props) => {
     const characterId = parseInt(props.match.params.id);
     const foundCharacter = characters.find((character) => character.id === characterId);
-    // console.log(foundCharacter);
     if (foundCharacter !== undefined) {
       return <CharacterDetailPj character={foundCharacter} />;
+    } else {
+      return <CharacterNotFound />;
     }
   };
 
