@@ -11,6 +11,8 @@ const App = () => {
   const [characters, setCharacters] = useState([]);
   const [nameFilter, setNameFilter] = useState('');
   const [speciesFilter, setSpeciesFilter] = useState('all');
+  const [genderFilter, setGenderFilter] = useState('all');
+  const [episodeFilter, setEpisodeFilter] = useState('');
 
   // Call Api
   useEffect(() => {
@@ -23,6 +25,10 @@ const App = () => {
       setNameFilter(data.value);
     } else if (data.key === 'species') {
       setSpeciesFilter(data.value);
+    } else if (data.key === 'gender') {
+      setGenderFilter(data.value);
+    } else if (data.key === 'episode') {
+      setEpisodeFilter(data.value);
     }
   };
 
@@ -37,6 +43,19 @@ const App = () => {
         return true;
       } else {
         return character.species === speciesFilter;
+      }
+    })
+    .filter((character) => {
+      return genderFilter === 'all' ? true : character.gender === genderFilter;
+    })
+    .filter((character) => {
+      if (episodeFilter.length === 0) {
+        return true;
+      } else {
+        console.log(character.episode, episodeFilter);
+        return character.episode.toString() === episodeFilter;
+        // se puede hacer parseando pero hay que poner un número base entre 2 y 36 para no tener fallos de navegador
+        // return character.episode === parseInt(episodeFilter, 10);
       }
     });
 
