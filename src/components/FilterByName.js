@@ -13,7 +13,7 @@ const FilterByName = (props) => {
   return (
     <>
       <label htmlFor='name'></label>
-      <input className='form__input-text' id='name' placeholder='Busca tu personaje' name='name' onChange={handleChange} onKeyDown={handleChange}></input>
+      <input className='form__input-text' id='name' placeholder='Busca tu personaje' name='name' value={props.nameFilter} onChange={handleChange} onKeyDown={handleChange}></input>
     </>
   );
 };

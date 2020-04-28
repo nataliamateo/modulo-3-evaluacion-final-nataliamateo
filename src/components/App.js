@@ -12,6 +12,7 @@ const App = () => {
   const [characters, setCharacters] = useState([]);
   const [nameFilter, setNameFilter] = useState('');
   const [speciesFilter, setSpeciesFilter] = useState('all');
+  const [statusFilter, setStatusFilter] = useState('all');
 
   // Call Api
   useEffect(() => {
@@ -24,6 +25,8 @@ const App = () => {
       setNameFilter(data.value);
     } else if (data.key === 'species') {
       setSpeciesFilter(data.value);
+    } else if (data.key === 'status') {
+      setStatusFilter(data.value);
     }
   };
 
@@ -39,6 +42,9 @@ const App = () => {
       } else {
         return character.species === speciesFilter;
       }
+    })
+    .filter((character) => {
+      return statusFilter === 'all' ? true : character.status === statusFilter;
     });
 
   // render card detail
@@ -58,7 +64,7 @@ const App = () => {
       <main>
         <Switch>
           <Route exact path='/'>
-            <Filters className='header__form' handleFilter={handleFilter} />
+            <Filters className='header__form' handleFilter={handleFilter} nameFilter={nameFilter} />
             <CharacterList characters={filterCharacter} />
           </Route>
           <Route path='/:id' render={renderCharacterDetail} />
