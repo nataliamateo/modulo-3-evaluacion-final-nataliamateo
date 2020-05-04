@@ -1,68 +1,28 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+El proyecto está creado a partir del repositorio [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Buscador de personajes Rick and Morty 🚀
+Buscador realizado por Natalia Mateo como prueba final del Modulo 3 de Adalab.
 
-In the project directory, you can run:
+## Requisitos
 
-### `npm start`
+React y uso de React Route, asi como SASS.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Partes del proyecto
+A continuación se indicará las partes de las que consta el proyecto.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Listado de personajes
 
-### `npm run build`
+Para el listado hemos utilizado el servicio de https://rickandmortyapi.com/documentation/#get-all-characters que nos devuelve la inofrmación sobre los primeros 20 personajes de la serie.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Filtrado
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Se ha realizado un campo de filtro de búsqueda por nombre, que permite que aparezcan los personajes que coincidan con el campo de búsqueda. En caso de que el personaje no exista se devuelve un resultado indicando al usuario que realice la búsqueda de nuevo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+También se ha implementado un filtro para poder buscar entre los 20 resultados por su especie.
 
-### `npm run eject`
+### Personajes
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Cada personaje tiene un link que redirecciona a una tarjeta con más datos personales de cada uno de ellos.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

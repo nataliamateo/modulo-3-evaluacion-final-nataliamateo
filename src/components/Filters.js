@@ -4,6 +4,7 @@ import '../stylesheets/Filters.scss';
 import FilterBySpecies from './FilterBySpecies';
 import FilterByGender from './FilterByGender';
 import FilterByEpisode from './FilterByEpisode';
+import FilterByStatus from './FilterByStatus';
 
 const Filters = (props) => {
   // avoy submit form
@@ -12,10 +13,11 @@ const Filters = (props) => {
   };
   return (
     <form className='form' onSubmit={handleSubmit}>
-      <FilterByName handleFilter={props.handleFilter} />
+      <FilterByName handleFilter={props.handleFilter} nameFilter={props.nameFilter} />
       <FilterBySpecies handleFilter={props.handleFilter} />
       <FilterByGender handleFilter={props.handleFilter} />
       <FilterByEpisode handleFilter={props.handleFilter} />
+      <FilterByStatus handleFilter={props.handleFilter} />
     </form>
   );
 };
