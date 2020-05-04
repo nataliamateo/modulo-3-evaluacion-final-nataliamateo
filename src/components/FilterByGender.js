@@ -1,4 +1,5 @@
 import React from 'react';
+import '../stylesheets/FilterByGender.scss';
 
 const FilterByGender = (props) => {
   const handleChange = (ev) => {
@@ -10,9 +11,13 @@ const FilterByGender = (props) => {
 
   return (
     <>
-      <label htmlFor='gender'>Género</label>
-      <select id='gender' name='gender' onChange={handleChange}>
-        <option value='all'>Todos</option>
+      <label className='gender-title' htmlFor='gender'>
+        Género
+      </label>
+      <select className='gender-value' id='gender' name='gender' onChange={handleChange}>
+        <option value='all' defaultChecked>
+          Todos
+        </option>
         <option value='Male'>Hombre</option>
         <option value='Female'>Mujer</option>
         <option value='unknown'>Desconocido</option>

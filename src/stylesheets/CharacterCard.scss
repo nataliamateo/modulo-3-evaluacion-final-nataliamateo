@@ -3,9 +3,8 @@
   display: flex;
   flex-direction: column;
   width: 16rem;
-  height: 24rem;
+  height: 26rem;
   background-image: linear-gradient(to top, lightgrey 0%, lightgrey 1%, #e0e0e0 26%, #efefef 48%, #d9d9d9 75%, #bcbcbc 100%);
-  margin-bottom: 20px;
   border-radius: 4px;
   box-shadow: 18px -5px 37px -26px rgba(0, 0, 0, 0.75);
   transform: scale(0.8);
@@ -14,14 +13,14 @@
   }
   @media all and (min-width: 768px) {
     justify-self: center;
-    margin-bottom: 40px;
+
     width: 20rem;
-    height: 28rem;
+    height: 30rem;
   }
   @media all and (min-width: 1280px) {
     margin-bottom: 50px;
     width: 22rem;
-    height: 29rem;
+    height: 33rem;
     transform: scale(1);
     &:hover {
       transform: scale(1.1);

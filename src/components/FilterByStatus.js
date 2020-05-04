@@ -1,4 +1,5 @@
 import React from 'react';
+import '../stylesheets/FilterByStatus.scss';
 
 const FilterByStatus = (props) => {
   const handleChange = (ev) => {
@@ -11,12 +12,14 @@ const FilterByStatus = (props) => {
 
   return (
     <>
-      <label htmlFor='status'></label>
-      <select id='status' onChange={handleChange}>
-        <option value='all'>todos</option>
-        <option value='Alive'>vivos</option>
-        <option value='Dead'>muerto</option>
-        <option value='unknown'>desconocido</option>
+      <label className='status-title' htmlFor='status'>
+        Estado:
+      </label>
+      <select className='status-value' id='status' onChange={handleChange}>
+        <option value='all'>Todos</option>
+        <option value='Alive'>Vivos</option>
+        <option value='Dead'>Muertos</option>
+        <option value='unknown'>Desconocido</option>
       </select>
     </>
   );

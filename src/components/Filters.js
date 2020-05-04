@@ -15,9 +15,11 @@ const Filters = (props) => {
     <form className='form' onSubmit={handleSubmit}>
       <FilterByName handleFilter={props.handleFilter} nameFilter={props.nameFilter} />
       <FilterBySpecies handleFilter={props.handleFilter} />
-      <FilterByGender handleFilter={props.handleFilter} />
+      <div className='form__selects'>
+        <FilterByGender handleFilter={props.handleFilter} />
+        <FilterByStatus handleFilter={props.handleFilter} />
+      </div>
       <FilterByEpisode handleFilter={props.handleFilter} />
-      <FilterByStatus handleFilter={props.handleFilter} />
     </form>
   );
 };

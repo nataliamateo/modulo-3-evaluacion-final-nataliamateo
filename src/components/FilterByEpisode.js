@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import '../stylesheets/FilterByEpisode.scss';
 
 const FilterByEpisode = (props) => {
   const handleChange = (ev) => {
@@ -14,7 +15,7 @@ const FilterByEpisode = (props) => {
   return (
     <>
       <label htmlFor='episode'></label>
-      <input className='form__input-text' id='episode' placeholder='Número de episodios' name='episode' type='number' onChange={handleChange}></input>
+      <input className='form__input-episode' id='episode' placeholder='Número de episodios' name='episode' type='number' onChange={handleChange}></input>
     </>
   );
 };
